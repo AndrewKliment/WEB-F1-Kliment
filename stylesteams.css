@@ -1,0 +1,419 @@
+body {
+    margin: 0;
+    background-color: #1b1b1b;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+    color: #fff;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: fadeIn 0.8s forwards;
+
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.top-nav {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    background: radial-gradient(120% 90% at 30% 20%, rgba(0, 0, 0, .09), transparent 0%),
+              linear-gradient(0deg, rgba(0,0,0,.0), rgba(0,0,0,10.55));
+     box-sizing: border-box; /* zahrne padding do šířky */
+    overflow-x: hidden;     /* zabrání horizontálnímu scrollu */
+}
+
+
+.top-nav .logo {
+    flex-shrink: 0;
+}
+
+.top-nav img {
+    height: 35px;
+}
+
+
+.nav {
+    flex: 1;
+}
+
+
+.nav nav {
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+}
+
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    overflow: hidden;
+}
+.hero-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+}
+.hero-content {
+    position: absolute;
+    left: 8%;
+    bottom: 30%;
+    z-index: 5;
+    display: flex;
+    align-items: center  ;
+}
+.hero-f1-logo {
+    height: 400px;
+    margin-right: 10%;
+
+}
+.hero-content h1 {
+    font-size: 80px;
+    line-height: 70px;
+}
+
+.bottom-bar {
+    width: 100%;
+    background-color: #111;
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom-nav {
+    display: flex;
+    justify-content: center;
+    gap: 80px;
+    margin-bottom: 20px;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    margin-top: 50px;
+    letter-spacing: 1px;
+}
+
+.bottom-logo  {
+    width: 200px;
+    margin-top: 10px;
+}
+
+
+.copyright {
+    font-size: 12px;
+    opacity: 0.5;
+    margin-top: 10px;
+    color: rgb(255, 255, 255);
+}
+
+
+.is-hidden{ display:none; }
+
+/* list wrapper */
+.teams-best{ padding: 22px 18px 28px; background:#1f1f1f; }
+
+/* reuse your best bar styles, pokud je nemáš: */
+.best {
+  padding: 22px 18px 28px;
+  background: #1f1f1f;
+}
+
+.best__bar {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  max-width: 1600px;
+  margin: 0 auto 18px;
+}
+
+.best__title {
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 34px;
+  color: #e8e8e8;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.best__line {
+  height: 16px;
+  background:
+    linear-gradient(to right, #ff0000, #ff0000) right/100% 100% no-repeat,
+    linear-gradient(to left, #ff0000, transparent) right/100% 100% no-repeat;
+    
+  border-radius: 5px;
+  position: relative;
+}
+
+/* TEAM LIST cards (velké pruhy) */
+.teams-list{
+  max-width:1500px;margin:0 auto;
+  display:grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.team-card{
+  border-radius: 6px;
+  overflow:hidden;
+  
+  background: var(--grad, linear-gradient(135deg,#222,#111));
+  box-shadow: 0 14px 38px rgba(0,0,0,.45);
+  cursor:pointer;
+  position: relative;
+  min-height: 170px;
+}
+
+
+.team-card__title{
+  text-align:center;
+  margin: 16px 12px 0;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.95);
+  text-shadow: 0 10px 22px rgba(0,0,0,.45);
+}
+
+.team-card__car{
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  display:block;
+  margin-top: 6px;
+  filter: drop-shadow(0 18px 18px rgba(0,0,0,.35));
+}
+
+.team-card__driverLeft,
+.team-card__driverRight{
+  position:absolute;
+  top: 12%;
+  bottom: 12%;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: rgba(255,255,255,.80);
+  writing-mode:sideways-rl
+}
+
+.team-card__driverLeft{ left: 10px; transform: translateY(-10%) rotate(180deg); }
+.team-card__driverRight{ right: 10px; }
+
+@media (max-width: 700px){
+  .team-card__title{ font-size: 22px; }
+  .team-card__driverLeft,.team-card__driverRight{ display:none; }
+}
+
+/* DETAIL */
+.team-detail{
+  max-width:1500px;
+  margin:0 auto;
+  padding: 26px 18px 38px;
+  background:#1f1f1f;
+  opacity: 0;
+  transform: translateY(60px) ;
+  transition: all 0.7s ease;
+  pointer-events: none;
+}
+
+.team-detail.active {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.back-btn{
+  background: transparent;
+  color: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 6px;
+  border-color: #4d4d4d;
+  padding: 10px 14px;
+  cursor: pointer;
+  margin-bottom: 14px;
+  font-weight: 800;
+}
+
+.team-hero{
+  border-radius: 6px;
+  overflow:hidden;
+  background: var(--detail-grad, linear-gradient(135deg,#1a3cff,#0b0b22));
+  min-height: 500px;
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.team-hero__logo{
+  position:absolute;
+  inset: auto 16px auto 50px;
+  height: 200px;
+  object-fit: contain;
+ 
+}
+
+.team-hero__car{
+  width: min(900px,);
+  height: 250px;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 18px rgba(0,0,0,.85));
+  margin-left: 20%;
+}
+
+.team-drivers{
+    height: 400px;
+    width: 100%;
+    background: radial-gradient(120% 90% at 30% 20%, rgba(255, 255, 255, 0.09), transparent 65%),
+              linear-gradient(135deg, rgba(151, 151, 151, 0.2), rgba(0,0,0,.25));
+    z-index: 1;
+}
+
+.team-drivers :hover {
+      transform: translateY(0);
+  box-shadow: 2px 5px 100px  rgba(102, 102, 102, 0.45);
+  transition: all 0.3s ease;
+}
+
+
+
+.team-profile-title{
+  margin: 18px 0 10px;
+  font-size: 50px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: rgba(255,255,255,.92);
+  
+}
+
+.team-drivers{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.driver-mini{
+  border-radius: 6px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.20);
+  cursor:pointer;
+  min-height: 170px;
+  position: relative;
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+}
+
+.driver-mini__name{
+  position:absolute;
+  left:12px; top:12px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: rgba(255,255,255,.92);
+}
+
+.driver-mini__img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  padding: 10px 10px 0;
+  filter: drop-shadow(0 14px 16px rgba(0,0,0,.35));
+}
+
+@media (max-width: 700px){
+  .team-drivers{ grid-template-columns: 1fr; }
+}
+
+.team-profile{
+  display:grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 14px;
+  border-top: 1px solid rgba(255,255,255,.10);
+  padding-top: 6px;
+}
+
+.tp-item{ padding: 10px 12px; border:1px solid rgba(255,255,255,.08); border-radius: 14px; background: rgba(0,0,0,.16); }
+.tp-label{ font-size: 16px; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,.55); }
+.tp-value{ margin-top: 6px; font-weight: 900; letter-spacing: 1px; color: rgba(255,255,255,.92); font-size: 20px; }
+
+@media (max-width: 900px){
+  .team-profile{ grid-template-columns: 1fr; }
+}
+
+.team-body{
+  display:grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 16px;
+  margin-top: 16px;
+  align-items:start;
+}
+
+.team-photo{
+  width:100%;
+  height: 750px;
+  object-fit: cover;
+  border-radius: 14px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(0,0,0,.20);
+}
+
+.team-bio{
+  margin:auto;
+  font-size: 20px;
+  line-height: 1.65;
+  color: rgba(255,255,255,.82);
+  text-align: center;
+  hyphens: ;
+}
+
+.team-photo--wide{
+  margin-top: 16px;
+  height: 580px;
+}
+
+@media (max-width: 900px){
+  .team-body{ grid-template-columns: 1fr; }
+  .team-photo{ height: 200px; }
+  .team-photo--wide{ height: 230px; }
+}

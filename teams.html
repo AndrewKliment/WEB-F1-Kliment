@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="teams.js" defer></script>
+    <link rel="icon" type="image/png" href="images/formula-logo-.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>F1 - TEAMS 2025</title>
+    <link rel="stylesheet" href="stylesteams.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     <header class="top-nav">
+        <div class="logo">
+            <a href="index.html"><img src="images/FWONK.D-6358a63d.png"  alt="F1 logo" /></a>
+            
+        </div>
+        <div class="nav">
+            <nav>
+                <a href="tracks.html">SCHEDULE</a>
+                <a href="results.html">RESULTS</a>
+                <a href="drivers.html">DRIVERS</a>
+                <a href="teams.html">TEAMS</a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <img src="images/POZADI.jpg" class="hero-bg" alt="F1 Car Background">
+        
+        <div class="hero-content">
+            <img src="images/F1-Logo.png" class="hero-f1-logo" alt="F1 Red Logo">
+            <h1>TEAMS 2025</h1>
+        </div>
+    </section>
+
+    <section class="teams-best">
+  <div class="best__bar">
+    <span class="best__line"></span>
+    <h2 class="best__title">ALWAYS CHOOSE YOURS</h2>
+    <span class="best__line"></span>
+  </div>
+
+  <!-- LIST -->
+  <div id="teamsList" class="teams-list"></div>
+</section>
+
+<!-- DETAIL -->
+<section id="teamDetail" class="team-detail is-hidden" aria-live="polite">
+  <button id="backToTeams" class="back-btn" type="button">BACK ON THE GRID</button>
+
+  <div class="team-hero" id="tHero">
+    <img id="tHeroLogo" class="team-hero__logo" alt="team logo">
+    <img id="tHeroCar" class="team-hero__car" alt="team car">
+  </div>
+
+  <h2 class="team-drivers-title">DRIVERS</h2>
+  <div id="tDrivers" class="team-drivers"></div>
+
+  <h2 class="team-profile-title">TEAM PROFILE</h2>
+  <div class="team-profile">
+    <div class="tp-item"><div class="tp-label">FULL TEAM NAME</div><div id="tpFullName" class="tp-value"></div></div>
+    <div class="tp-item"><div class="tp-label">BASE</div><div id="tpBase" class="tp-value"></div></div>
+    <div class="tp-item"><div class="tp-label">TEAM CHIEF</div><div id="tpChief" class="tp-value"></div></div>
+    <div class="tp-item"><div class="tp-label">CHASSIS</div><div id="tpChassis" class="tp-value"></div></div>
+    <div class="tp-item"><div class="tp-label">POWER UNIT</div><div id="tpPU" class="tp-value"></div></div>
+    <div class="tp-item"><div class="tp-label">TEAM ENTRY</div><div id="tpEntry" class="tp-value"></div></div>
+  </div>
+
+  <div class="team-body">
+    <img id="tPhoto1" class="team-photo" alt="team photo 1">
+    <p id="tBio" class="team-bio"></p>
+    
+  </div>
+
+  <img id="tPhoto2" class="team-photo team-photo--wide" alt="team photo 2">
+</section>
+
+    
+    <section class="content-placeholder"></section>
+
+        <div class="bottom-bar">
+
+    <div class="bottom-nav">
+        <a href="tracks.html">SCHEDULE</a>
+            <a href="results.html">RESULTS</a>
+            <a href="drivers.html">DRIVERS</a>
+            <a href="teams.html">TEAMS</a>
+    </div>
+
+    <div class="bottom-center">
+        <img class="bottom-logo" src="images/F1-Logo.png" alt="F1 logo small">
+        
+    </div>
+
+    <p class="copyright">
+        © 1950–2025 Formula One World Championship Limited
+    </p>
+</div>
+
+</body>
+</html>

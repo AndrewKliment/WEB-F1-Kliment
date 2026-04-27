@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="script.js" defer></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/formula-logo-.png">
+    <title>F1 - DRIVERS GRID 2025</title>
+    <link rel="stylesheet" href="stylesdrivers.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+     <header class="top-nav">
+        <div class="logo">
+            <a href="index.html"><img src="images/FWONK.D-6358a63d.png"  alt="F1 logo" /></a>
+            
+        </div>
+        <div class="nav">
+            <nav>
+                <a href="tracks.html">SCHEDULE</a>
+                <a href="results.html">RESULTS</a>
+                <a href="drivers.html">DRIVERS</a>
+                <a href="teams.html">TEAMS</a>
+            </nav>
+        </div>
+    </header>
+
+    
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <img src="images/POZADI.jpg" class="hero-bg" alt="F1 Car Background">
+        
+        <div class="hero-content">
+            <img src="images/F1-Logo.png" class="hero-f1-logo" alt="F1 Red Logo">
+            <h1>DRIVERS GRID<br>2025</h1>
+        </div>
+    </section>
+
+<section class="best">
+    <div class="best__bar">
+    <span class="best__line"></span>
+    <h2 class="best__title">THE BEST OF THE BEST</h2>
+    <span class="best__line"></span>
+  </div>
+
+  <!-- GRID (list) -->
+  <div id="driversGrid" class="drivers-grid" aria-live="polite"></div>
+</section>
+
+<!-- DETAIL VIEW (hidden by default) -->
+<section id="driverDetail" class="driver-detail is-hidden" aria-live="polite">
+  <button id="backToGrid" class="back-btn" type="button">BACK ON THE GRID</button>
+
+  <div class="detail-hero">
+    <div class="detail-hero__info">
+      <h1 id="dName" class="detail-hero__name"></h1>
+      <p id="dTeam" class="detail-hero__team"></p>
+      <img id="dSignature" />
+    </div>
+
+    <div class="detail-hero__imgWrap">
+      <img id="dPortrait" class="detail-hero__portrait" alt="driver portrait" />
+    </div>
+  </div>
+
+  <div class="bio">
+    <h2 class="bio__title">BIOGRAPHY</h2>
+
+    <div class="bio__meta">
+      <div class="bio__metaItem">
+        <div class="bio__label">DATE OF BIRTH</div>
+        <div id="dDob" class="bio__value"></div>
+      </div>
+      <div class="bio__metaItem">
+        <div class="bio__label">PLACE OF BIRTH</div>
+        <div id="dPob" class="bio__value">HASSELT, BELGIUM</div>
+      </div>
+    </div>
+
+    <div class="bio__content">
+      <div id="dBioText" class="bio__text"></div>
+
+      <div class="bio__photos">
+        <img id="dBioPhoto1" class="bio__photo" alt="bio photo 1">
+        <img id="dBioPhoto2" class="bio__photo" alt="bio photo 2">
+      </div>
+
+    </div>
+    
+  </div>
+</section>
+
+    
+    <section class="content-placeholder"></section>
+
+        <div class="bottom-bar">
+
+    <div class="bottom-nav">
+        <a href="tracks.html">SCHEDULE</a>
+            <a href="results.html">RESULTS</a>
+            <a href="drivers.html">DRIVERS</a>
+            <a href="teams.html">TEAMS</a>
+    </div>
+
+    <div class="bottom-center">
+        <img class="bottom-logo" src="images/F1-Logo.png" alt="F1 logo small">
+        
+    </div>
+
+    <p class="copyright">
+        © 1950–2025 Formula One World Championship Limited
+    </p>
+</div>
+
+</body>
+</html>
