@@ -1,0 +1,71 @@
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("showAllHighlights");
+  const grid = document.getElementById("allHighlightsGrid");
+
+  const highlights = [
+    "md9-jG4RzXs",
+    "Hml6MaRRkn8",
+    "or9ooNWaqKU",
+    "bFXLP487kXo",
+    "Li93iQDZQeg",
+    "o0ANo138B3c",
+    "xkRXnrvFCY0",
+    "ajzQj7bjSWE",
+    "ATlMK7ln5Dc",
+    "93ZnZF_zWds",
+    "Wj6DHG0X66k",
+    "daWr9xnkKS4",
+    
+    "yApM21L0GgY",
+    "hrPtK5D5yn4",
+    "JIRqdeNl2cU",
+    "kGMp1Byuwto",
+    "JntKOmbMI08",
+    "XZhXFbFCOu4",
+    "CdKwc1bC44c",
+    "hTqxfkWRimk",
+    "MK83clSv6-k",
+    "uQc-pW3QLuI",
+    "BeaVJggQ2dc",
+    "S-LMSpzlnc0",
+  ];
+
+  let visible = false; // aktuální stav
+
+  btn.addEventListener("click", () => {
+    visible = !visible; // přepne stav
+
+    if (visible) {
+      grid.style.display = "grid";
+      btn.innerText = "Hide Highlights"; // změna textu
+
+      // naplníme grid jen jednou
+      if(grid.children.length === 0){
+        highlights.forEach(id => {
+          const a = document.createElement("a");
+          a.href = `https://www.youtube.com/watch?v=${id}`;
+          a.target = "_blank";
+          a.className = "video-card";
+
+          const img = document.createElement("img");
+          img.src = `https://img.youtube.com/vi/${id}/mqdefault.jpg`;
+
+          const play = document.createElement("div");
+          play.className = "play";
+          play.innerText = "▶";
+
+          a.appendChild(img);
+          a.appendChild(play);
+          grid.appendChild(a);
+        });
+      }
+
+      grid.scrollIntoView({ behavior: "smooth" });
+    } else {
+      grid.style.display = "none";
+      btn.innerText = "All Highlights"; // vrátíme text zpět
+    }
+  });
+});

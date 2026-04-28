@@ -221,7 +221,11 @@ body {
 }
 
 /* ====== DETAIL ====== */
-.hidden{ display:none; }
+
+
+.hidden {
+  display: none;
+}
 
 .back-btn{
    background: transparent;
@@ -422,3 +426,4 @@ body {
   }
 
 }
+
