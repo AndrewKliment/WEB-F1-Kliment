@@ -851,3 +851,27 @@ body {
 .high_btn:hover{
   border-color: rgba(102, 102, 102, 0.28);
 }
+
+.hero {
+    position: relative; /* Nutné pro pozicování tlačítka */
+}
+
+.mute-button {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7); /* F1 červená s průhledností */
+    border: 2px solid #fff;
+    color: rgb(0, 0, 0);
+    padding: 10px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.mute-button:hover {
+    background: rgb(24, 24, 24);
+    
+}

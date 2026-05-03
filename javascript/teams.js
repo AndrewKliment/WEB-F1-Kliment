@@ -1,4 +1,3 @@
-console.log("✅ teams.js loaded");
 
 import { teams } from "./../data/dataTeams.js";
 

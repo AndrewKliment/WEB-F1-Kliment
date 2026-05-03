@@ -252,7 +252,7 @@ body.modal{
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.65);
-    opacity: 0;
+    opacity: 1;
     visibility: hidden;
     transition: opacity 0.35s ease, visibility 0.35s ease;
 
@@ -576,7 +576,7 @@ body.modal{
 .track-detail {
     width: 92%;
     margin: 50px auto;
-    background: #000;
+    background: #e7e2e2;
     border: 3px solid red;
     border-radius: 10px;
     padding: 30px;
@@ -602,7 +602,8 @@ body.modal{
 }
 
 .detail-info {
-    font-size: 25px;
+    font-size: 30px;
+
 }
 
 .placeholder {
@@ -615,12 +616,13 @@ body.modal{
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   display: none;
   justify-content: center;
   align-items: center;
   overflow-y: auto;
   z-index: 999;
+  
   
 }
 
@@ -630,7 +632,7 @@ body.modal{
 
 .full-screen-content {
   background: #000000;
-  color: #fff;
+  color: #ffffff;
   
   border-radius: 10px;
   width: 100%;

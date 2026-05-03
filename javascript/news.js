@@ -69,3 +69,19 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+const video = document.getElementById('heroVideo');
+const muteBtn = document.getElementById('muteBtn');
+const muteIcon = document.getElementById('muteIcon');
+
+muteBtn.addEventListener('click', () => {
+    if (video.muted) {
+        video.muted = false;
+        muteIcon.textContent = '🔊'; // Zapnutý zvuk
+        muteBtn.style.background = 'rgb(0, 0, 0)'; // Plná barva při zapnutí
+    } else {
+        video.muted = true;
+        muteIcon.textContent = '🔇'; // Vypnutý zvuk
+        muteBtn.style.background = 'rgba(255, 24, 1, 0.7)';
+    }
+});
