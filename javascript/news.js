@@ -82,6 +82,6 @@ muteBtn.addEventListener('click', () => {
     } else {
         video.muted = true;
         muteIcon.textContent = '🔇'; // Vypnutý zvuk
-        muteBtn.style.background = 'rgba(255, 24, 1, 0.7)';
+        muteBtn.style.background = 'rgba(0, 0, 0, 0.7)';
     }
 });
