@@ -64,8 +64,22 @@ body {
 .hero {
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 100vh; 
     overflow: hidden;
+    background-color: #1b1b1b; 
+    display: flex;
+    line-height: 0;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    bottom: -1px; /* mírný přesah dolů pro jistotu */
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: linear-gradient(to bottom, transparent, #1b1b1b);
+    z-index: 1;
 }
 .hero-bg {
     width: 100%;
@@ -100,7 +114,7 @@ body {
 
 .bottom-bar {
     width: 100%;
-    background-color: #111;
+    background-color: #060606;
     padding: 20px 0px;
     display: flex;
     flex-direction: column;
@@ -138,13 +152,12 @@ body {
 
 .is-hidden{ display:none; }
 
-/* list wrapper */
-.teams-best{ padding: 22px 18px 28px; background:#1f1f1f; }
+.teams-best{ padding: 22px 18px 28px; background:#1b1b1b; }
 
-/* reuse your best bar styles, pokud je nemáš: */
 .best {
   padding: 22px 18px 28px;
-  background: #1f1f1f;
+  background: #1b1b1b;
+  margin-bottom: 60%;
 }
 
 .best__bar {
@@ -154,6 +167,8 @@ body {
   gap: 16px;
   max-width: 1600px;
   margin: 0 auto 18px;
+    margin-bottom: 5%;
+
 }
 
 .best__title {
@@ -168,10 +183,20 @@ body {
 .best__line {
   height: 16px;
   background:
-    linear-gradient(to right, #ff0000, #ff0000) right/100% 100% no-repeat,
+    linear-gradient(to right, #1b1b1b, #ff0000) right/100% 100% no-repeat,
     linear-gradient(to left, #ff0000, transparent) right/100% 100% no-repeat;
     
-  border-radius: 5px;
+  border-radius: 2px;
+  position: relative;
+}
+
+.best__line-2 {
+  height: 16px;
+  background:
+    linear-gradient(to right, #ff0000, #1b1b1b) right/100% 100% no-repeat,
+    linear-gradient(to left, #ff0000, transparent) right/100% 100% no-repeat;
+    
+  border-radius: 2px;
   position: relative;
 }
 
