@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: #1b1b1b;
+    background: linear-gradient(180deg, #1b1b1b, #060606);
     font-family: "Orbitron", sans-serif;
     font-optical-sizing: auto;
     font-weight: 800;
@@ -173,7 +173,7 @@ body {
 
 .bottom-bar {
     width: 100%;
-    background-color: #111;
+    background-color: #060606;
     padding: 20px 0px;
     display: flex;
     flex-direction: column;

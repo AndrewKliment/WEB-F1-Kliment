@@ -85,3 +85,29 @@ muteBtn.addEventListener('click', () => {
         muteBtn.style.background = 'rgba(0, 0, 0, 0.7)';
     }
 });
+
+    let containers = document.getElementsByClassName("slideshow-container");
+
+    // Pro každý kontejner spustí samostatnou funkci
+    for (let s = 0; s < containers.length; s++) {
+        initSlider(containers[s]);
+    }
+
+    function initSlider(container) {
+        let slideIndex = 0;
+        let fotky = container.getElementsByClassName("moje-prezentace");
+        
+        function ukazFotky() {
+            for (let i = 0; i < fotky.length; i++) {
+                fotky[i].style.display = "none";  
+            }
+            slideIndex++;
+            if (slideIndex > fotky.length) {slideIndex = 1}    
+            
+            fotky[slideIndex-1].style.display = "block";  
+            setTimeout(ukazFotky, 4000); 
+        }
+        
+        ukazFotky();
+    }
+

@@ -152,7 +152,10 @@ body {
 
 .is-hidden{ display:none; }
 
-.teams-best{ padding: 22px 18px 28px; background:#1b1b1b; }
+.teams-best{ 
+  padding: 22px 18px 28px; 
+    background: linear-gradient(180deg, #1b1b1b, #060606);
+}
 
 .best {
   padding: 22px 18px 28px;
@@ -167,7 +170,7 @@ body {
   gap: 16px;
   max-width: 1600px;
   margin: 0 auto 18px;
-    margin-bottom: 5%;
+    margin-bottom:5%;
 
 }
 
@@ -206,6 +209,7 @@ body {
   display:grid;
   grid-template-columns: 1fr;
   gap: 25px;
+
 }
 
 .team-card{
