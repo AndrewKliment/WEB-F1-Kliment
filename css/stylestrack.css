@@ -344,32 +344,37 @@ body.modal{
     margin-bottom: 50px;
 }
 
-@media (max-width: 1400px) {
-    .top-nav {
-        flex-direction: column;
-        align-items: left;
-        width: 100%;
-    }
+@media (max-width: 1600px) {
+  .top-nav {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    background: radial-gradient(120% 90% at 30% 20%, rgba(0, 0, 0, .09), transparent 0%),
+              linear-gradient(0deg, rgba(0,0,0,.0), rgba(0,0,0,10.55));
+     box-sizing: border-box; /* zahrne padding do šířky */
+    overflow-x: hidden;     /* zabrání horizontálnímu scrollu */
+    animation: fadeIn 2s forwards;
+  }
+  
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 5%;
+    gap: 40px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    flex-direction:column;
+  }
 
-    .nav {
-        width: 100%;
-        margin-top: 20px;
-    }
-
-    .nav nav {
-        flex-direction: row;
-        gap: 5px;
-    }
-
-    .nav a {
-        font-size: 25px;
-    }
-
-    .best__bar {
-        margin-bottom: -30%;
-        width: 90%;
-    }
-
+  .section.reverse {
+    flex-direction: column-reverse;
+  }
+    
     .hero-content {
         flex-direction: column;
         align-items: center;
@@ -395,7 +400,23 @@ body.modal{
 
 
     
-@media (max-width: 1025px) {
+@media (max-width: 1200px) {
+  .top-nav {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    background: radial-gradient(120% 90% at 30% 20%, rgba(0, 0, 0, .09), transparent 0%),
+              linear-gradient(0deg, rgba(0,0,0,.0), rgba(0,0,0,10.55));
+     box-sizing: border-box; /* zahrne padding do šířky */
+    overflow-x: hidden;     /* zabrání horizontálnímu scrollu */
+    animation: fadeIn 2s forwards;
+  }
+  .top-nav .logo {
+    
+  }
     .hero-content {
         flex-direction: column;
         align-items: center;
@@ -421,7 +442,36 @@ body.modal{
     }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 992px) {
+
+  .hero .bg-video {
+    display: none;
+  }
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 10vh;
+    overflow: hidden;
+    background-color: #121212; 
+    display: flex; 
+    line-height: 0; 
+  }
+
+  .nav a {
+        font-size: 18px;
+        margin-top: 1%;
+
+    }
+
+  
+
+  .top-nav {
+    width: 100%;
+  }
+    
+}
+
+@media (max-width: 768px) {
     .hero-content {
         flex-direction: column;
         align-items: center;
@@ -462,6 +512,8 @@ body.modal{
 
     .nav a {
         font-size: 25px;
+        margin-top: 1%;
+
     }
 
     .hero-f1-logo {
@@ -492,6 +544,8 @@ body.modal{
     .hero {
         width: 100%;
     }
+
+
 
 }
 

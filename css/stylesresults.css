@@ -197,7 +197,7 @@ body {
 }
 
 .race-name {
-  font-size:56px;
+  font-size:46px;
   margin:0 0 0 10%;
   font-weight: 900;
 }
@@ -211,7 +211,7 @@ body {
 }
 
 .flag {
-  width:250px;
+  width:300px;
   height:auto;
  
 }
