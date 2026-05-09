@@ -440,39 +440,305 @@ body {
   display:block;
 }
 
-/* mobil a tablet */
-@media (max-width:768px){
 
-  .hamburger{
-    display:flex;
+
+@media (max-width: 1600px) {
+  .top-nav {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    background: radial-gradient(120% 90% at 30% 20%, rgba(0, 0, 0, .09), transparent 0%),
+              linear-gradient(0deg, rgba(0,0,0,.0), rgba(0,0,0,10.55));
+     box-sizing: border-box; /* zahrne padding do šířky */
+    overflow-x: hidden;     /* zabrání horizontálnímu scrollu */
+    animation: fadeIn 2s forwards;
   }
-
-  /* menu defaultně skryté */
-  .nav{
-    display:none;
-    position:absolute;
-    top:70px;
-    left:0;
-    width:100%;
-    background:black;
-    text-align:center;
-  }
-
-  .nav nav{
-    display:flex;
+  
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 5%;
+    gap: 40px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
     flex-direction:column;
   }
 
-  .nav a{
-    padding:15px;
-    font-size:18px;
-    border-bottom:1px solid rgba(255,255,255,0.1);
+  .section.reverse {
+    flex-direction: column-reverse;
+  }
+    
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 25%;
+        padding: 0;
+        font-size: 800px;
+
+    }
+
+    .hero-f1-logo {
+        display: none;
+    }
+
+    
+    .track-map {
+        width: 65%;
+    }
+
+    .track-info {
+        width: 40%;
+        font-size: 25px;
+    }
+}
+
+
+
+    
+@media (max-width: 1200px) {
+  .top-nav {
+    width: 100%;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    z-index: 5;
+    background: radial-gradient(120% 90% at 30% 20%, rgba(0, 0, 0, .09), transparent 0%),
+              linear-gradient(0deg, rgba(0,0,0,.0), rgba(0,0,0,10.55));
+     box-sizing: border-box; /* zahrne padding do šířky */
+    overflow-x: hidden;     /* zabrání horizontálnímu scrollu */
+    animation: fadeIn 2s forwards;
+  }
+   
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 15%;
+        padding: 0;
+        display: none;
+
+    }
+
+    .track-card {
+        width: 90%;
+        font-size: 30px;
+    }
+
+    .track-info {
+        width: 50%;
+        font-size: 20px;
+    }
+
+    .modal-flex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero {
+        height: 40vh;
+    }
+}
+
+@media (max-width: 992px) {
+
+  
+  
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    background-color: #121212; 
+    display: flex; 
+    line-height: 0; 
   }
 
-  /* kliknutí na hamburger */
-  .nav-toggle:checked ~ .nav{
-    display:block;
+  .nav a {
+        font-size: 18px;
+        margin-top: 1%;
+
+    }
+
+  
+
+  .top-nav {
+    width: 100%;
   }
+    
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5%;
+        padding: 0;
+
+    }
+
+    .track-card {
+        width: 90%;
+        font-size: 30px;
+    }
+
+    .top-nav {
+
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0;
+
+        
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .nav nav {
+        
+        flex-direction:column;
+        align-items: center;
+        gap: 15%;
+    }
+
+    .nav a {
+        font-size: 25px;
+        margin-top: 1%;
+
+    }
+
+    .hero-f1-logo {
+        display: none;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        margin-left: -20%;
+    }
+
+    .bottom-bar {
+    width: 100%;
+    background-color: #111;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .bottom-nav {
+        gap: 20px;
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+
+
+}
+
+@media (max-width: 601px) {
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5%;
+        padding: 0;
+
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+    .track-card {
+        width: 85%;
+        font-size: 30px;
+        margin-left: 2%;
+    }
+
+    .top-nav {
+
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 0;
+
+        
+    }
+
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .nav nav {
+        
+        flex-direction:column;
+        align-items: center;
+        gap: 15%;
+    }
+
+    .nav a {
+        font-size: 25px;
+    }
+
+    .hero-f1-logo {
+        display: none;
+    }
+
+    .hero-content {
+        width: 100%;
+    }
+
+    .hero-content h1 {
+        margin-left: -20%;
+        font-size: 70px;
+    }
+
+    .bottom-bar {
+        width: 100%;
+    background-color: #111;
+    padding: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .bottom-nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 1px;
+        padding: 0;
+    }
+
+    .bottom-nav a {
+        margin: 5%;
+    }
+
+    .hero {
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 80%;
+    }
 
 }
 
