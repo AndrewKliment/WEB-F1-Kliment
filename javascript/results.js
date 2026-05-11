@@ -1,7 +1,6 @@
 import { races } from "./../data/dataResults.js";
 
 
-// ===== ELEMENTY =====
 const racesView = document.getElementById("racesView");
 const detailView = document.getElementById("detailView");
 const racesList = document.getElementById("racesList");
@@ -15,7 +14,6 @@ const podium3 = document.getElementById("podium3");
 
 const resultsTable = document.getElementById("resultsTable");
 
-// ===== GENERUJ LIST KARET =====
 function renderRacesList() {
   racesList.innerHTML = "";
 
@@ -39,7 +37,6 @@ function renderRacesList() {
   });
 }
 
-// ===== OTEVŘI DETAIL =====
 function openRace(index) {
   const race = races[index];
 
@@ -48,7 +45,6 @@ function openRace(index) {
 
   detailTitle.textContent = race.track;
 
-  // Pódium (2,1,3 jako na screenu)
   const p1 = race.podium.find(p => p.pos === 1);
   const p2 = race.podium.find(p => p.pos === 2);
   const p3 = race.podium.find(p => p.pos === 3);
@@ -57,10 +53,9 @@ function openRace(index) {
   podium2.innerHTML = podiumHTML(p2);
   podium3.innerHTML = podiumHTML(p3);
 
-  // Výsledky 4–20 (ale můžeš klidně zobrazit všech 1–20)
   resultsTable.innerHTML = "";
   race.results20
-    .filter(r => r.pos >= 4) // aby to odpovídalo screenu (pódium zvlášť)
+    .filter(r => r.pos >= 4) 
     .forEach(r => {
       const row = document.createElement("div");
       row.className = "result-row";
@@ -88,12 +83,10 @@ function podiumHTML(p) {
 
 
 
-// ===== ZPĚT =====
 backBtn.addEventListener("click", () => {
   detailView.classList.add("hidden");
   racesView.classList.remove("hidden");
 });
 
-// INIT
 renderRacesList();
 

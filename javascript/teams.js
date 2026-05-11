@@ -2,12 +2,9 @@
 import { teams } from "./../data/dataTeams.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // ====== NASTAVENÍ ======
-  const DRIVERS_PAGE = "drivers.html"; // změň pokud máš jiný název (např. piloti.html)
+  const DRIVERS_PAGE = "drivers.html"; 
 
-  // ====== DATA: DOPLŇ SI ZBÝVAJÍCÍ TÝMY ======
-  // Pozn.: nechal jsem 2 hotové (Ferrari + Red Bull) a zbytek jako šablony.
-  // Když doplníš image cesty, hned to pojede.
+
   
 
   // ====== ELEMENTY ======
@@ -31,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const tPhoto1 = document.getElementById("tPhoto1");
   const tPhoto2 = document.getElementById("tPhoto2");
 
-  // Když chybí základní container, nedává smysl pokračovat
   if (!listEl) {
     console.error("❌ Missing #teamsList in HTML");
     return;
@@ -41,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // ====== RENDER LIST ======
   function renderTeamsList() {
     listEl.innerHTML = teams.map(t => `
       <article class="team-card" data-id="${t.id}" style="--grad:${t.gradient}">
@@ -57,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ====== OPEN TEAM DETAIL ======
   function openTeam(id) {
     const t = teams.find(x => x.id === id);
     if (!t) return;
@@ -65,7 +59,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (listWrap) listWrap.classList.add("is-hidden");
     
 
-    // background gradient
     if (listWrap) listWrap.classList.add("is-hidden");
     detail.style.setProperty("--detail-grad", t.detailGradient || t.gradient || "");
     detail.classList.remove("is-hidden");
@@ -87,14 +80,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     
 
-    // hero images
     if (tHeroLogo) {
       tHeroLogo.src = t.heroLogo || "";
       tHeroLogo.style.display = t.heroLogo ? "block" : "none";
     }
     if (tHeroCar) tHeroCar.src = t.heroCar || "";
 
-    // drivers mini
     if (tDrivers) {
       tDrivers.innerHTML = (t.drivers || []).map(d => `
         <article class="driver-mini" data-driver="${d.id}">
@@ -111,7 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    // profile
     const p = t.profile || {};
     if (tpFullName) tpFullName.textContent = p.fullName || "—";
     if (tpBase) tpBase.textContent = p.base || "—";
@@ -120,11 +110,9 @@ document.addEventListener("DOMContentLoaded", () => {
     if (tpPU) tpPU.textContent = p.powerUnit || "—";
     if (tpEntry) tpEntry.textContent = p.entry || "—";
 
-    // bio
     if (tBio) tBio.innerHTML = (t.bio || "").replace(/\n\n/g, "<br><br>");
   
 
-    // photos
     const ph1 = t.photos?.[0] || "";
     const ph2 = t.photos?.[1] || "";
     if (tPhoto1) {
@@ -149,10 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (backBtn) backBtn.addEventListener("click", backToTeams);
 
-  // start
   renderTeamsList();
 
-  // open from hash
   if (location.hash) {
     const id = location.hash.replace("#", "");
     if (teams.some(t => t.id === id)) openTeam(id);

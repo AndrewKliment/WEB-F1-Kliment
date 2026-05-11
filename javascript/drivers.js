@@ -3,7 +3,6 @@ import { drivers } from "./../data/dataDrivers.js";
 const cards = document.querySelectorAll(".track-card");
 const modals = document.querySelectorAll(".modal");
 
-// OPEN MODAL
 cards.forEach(card => {
     card.addEventListener("click", () => {
         const id = card.dataset.track;
@@ -12,14 +11,12 @@ cards.forEach(card => {
     });
 });
 
-// CLOSE MODAL (X)
 modals.forEach(modal => {
     modal.querySelector(".close").addEventListener("click", () => {
         modal.classList.remove("show");
     });
 });
 
-// CLICK OUTSIDE = CLOSE
 window.addEventListener("click", e => {
     if (e.target.classList.contains("modal")) {
         e.target.classList.remove("show");
@@ -42,12 +39,10 @@ const dPortrait = document.getElementById("dPortrait");
 const dDob = document.getElementById("dDob");
 const dPob = document.getElementById("dPob");
 
-// ====== JEDINÁ openDetail() FUNKCE ======
 function openDetail(id) {
   const d = drivers.find(x => x.id === id);
   if (!d) return;
 
-  // základní info
   if (dName) dName.textContent = d.name || "";
   if (dTeam) dTeam.textContent = d.team || "";
   if (dDob) dDob.textContent = d.dob || "—";
@@ -58,13 +53,11 @@ function openDetail(id) {
     dPortrait.alt = d.name || "driver";
   }
 
-  // ===== BIO TEXT =====
   const dBioText = document.getElementById("dBioText");
   if (dBioText) {
     dBioText.innerHTML = (d.bio || "").replace(/\n\n/g, "<br><br>");
   }
 
-  // ===== BIO FOTKY (2) =====
   const dBioPhoto1 = document.getElementById("dBioPhoto1");
   const dBioPhoto2 = document.getElementById("dBioPhoto2");
 
@@ -80,7 +73,7 @@ function openDetail(id) {
     if (p2) dBioPhoto2.src = p2;
   }
 
-  // gradient
+  
   if (detailEl) {
     detailEl.style.setProperty("--detail-grad", d.detailGradient || d.gradient || "");
     detailEl.classList.remove("is-hidden");
@@ -121,13 +114,11 @@ function renderGrid() {
 function backToGrid() {
   if (!detailEl) return;
 
-  // 1. spustí animaci (fade out + slide dolů)
   detailEl.classList.remove("active");
 
-  // 2. počká, než doběhne animace
   setTimeout(() => {
     detailEl.classList.add("is-hidden");
-  }, 400); // musí sedět na transition (0.4s)
+  }, 400); 
 
   const best = document.querySelector(".best");
   if (best) {
@@ -141,7 +132,6 @@ function backToGrid() {
 
 if (backBtn) backBtn.addEventListener("click", backToGrid);
 
-// start
 renderGrid();
 
 if (location.hash) {

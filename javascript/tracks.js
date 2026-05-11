@@ -31,26 +31,22 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
       `;
 
-      // zobraz overlay
       overlay.classList.add('show');
-      document.body.style.overflow = 'hidden'; // zabrání scrollu pozadí
+      document.body.style.overflow = 'hidden'; 
     });
   });
 
-  // Zavření modálu pomocí klávesy Esc
   window.addEventListener('keydown', (event) => {
     if (event.key === 'Escape') {
-      // Kontrola, jestli je modál vůbec otevřený
       if (overlay.classList.contains('show')) {
         overlay.classList.remove('show');
-        document.body.style.overflow = ''; // Vrátí scroll
+        document.body.style.overflow = ''; 
       }
     }
   });
 
-  // zavření
   closeBtn.addEventListener('click', () => {
     overlay.classList.remove('show');
-    document.body.style.overflow = ''; // povolí scroll zpět
+    document.body.style.overflow = ''; 
   });
 });
