@@ -392,7 +392,7 @@ body {
 
 
 .detail-hero__portrait{
-  width: ;
+
   height: auto;
   object-fit: contain;
   filter: drop-shadow(0 22px 18px rgba(0,0,0,.35));
@@ -534,14 +534,8 @@ body {
 
 }
     
-    
-
-    
 }
 
-
-
-    
 @media (max-width: 1200px) {
   .top-nav {
     width: 100%;
